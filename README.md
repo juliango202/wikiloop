@@ -10,3 +10,5 @@ seem normalized that way.
 I assume only links inside a paragraph in the article are valid(inside a <p> tag), and ignore links in floating boxes.
 
 Assuming beautifulsoup descendants respect the document ordering which is currently the case(https://stackoverflow.com/questions/37491970/beautifulsoup-what-order-does-descendants-go-in)
+
+Frontend created using https://github.com/facebook/create-react-app => npx create-react-app my-app

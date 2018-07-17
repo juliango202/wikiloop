@@ -3,7 +3,7 @@ from flask import Flask
 
 from WikipediaLinkFollower import WikipediaLinkFollower
 
-logging.basicConfig(filename='api.log',level=logging.DEBUG)
+logging.basicConfig(filename='api.log',level=logging.INFO)
 app = Flask(__name__)
 
 

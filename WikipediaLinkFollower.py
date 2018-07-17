@@ -47,12 +47,14 @@ class WikipediaLinkFollower:
         return True
 
     @classmethod
-    def is_wikipedia_tag_italicized(cls, tag):
+    def is_tag_italicized(cls, tag):
         """Return wether a tag in a wikipedia article produces italicized contents"""
         return tag.name == "i" or (tag.name == "div" and "role" in tag.attrs and tag.attrs["role"] == "note")
 
     @classmethod
     def find_non_italicized_parenthesized_links(cls, paragraph):
+        """Traverse a paragraph and yield links that are not inside parenthesis
+        and not inside an italicized element"""
         parenthesis = 0
 
         def traverse(tag):
@@ -64,7 +66,7 @@ class WikipediaLinkFollower:
                     parenthesis = 0
             elif tag.name == "a" and parenthesis == 0:
                 yield tag
-            elif not cls.is_wikipedia_tag_italicized(tag):
+            elif not cls.is_tag_italicized(tag):
                 for child in tag.children:
                     yield from traverse(child)
 
