@@ -1,0 +1,131 @@
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:root:Starting at https://en.wikipedia.org/wiki/Water
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Water HTTP/1.1" 200 96204
+ERROR:flask.app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/julian/Prog/github.com/wikiloop/api.py", line 12, in hello
+    l_follow = WikipediaLinkFollower("https://en.wikipedia.org/wiki/Water", "https://en.wikipedia.org/wiki/Philosophy")
+  File "/home/julian/Prog/github.com/wikiloop/WikipediaLinkFollower.py", line 25, in __init__
+    while self.has_next():
+  File "/home/julian/Prog/github.com/wikiloop/WikipediaLinkFollower.py", line 40, in has_next
+    next_url = self.get_first_valid_link(self.current_url, r.content)
+  File "/home/julian/Prog/github.com/wikiloop/WikipediaLinkFollower.py", line 86, in get_first_valid_link
+    assert len(page_main.select("p > p")) == 1, "There should not be nested <p> tags"
+AssertionError: There should not be nested <p> tags
+INFO:werkzeug:127.0.0.1 - - [17/Jul/2018 13:46:30] "GET / HTTP/1.1" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:root:Starting at https://en.wikipedia.org/wiki/Water
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Water HTTP/1.1" 200 96204
+ERROR:flask.app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/julian/Prog/github.com/wikiloop/api.py", line 12, in hello
+    l_follow = WikipediaLinkFollower("https://en.wikipedia.org/wiki/Water", "https://en.wikipedia.org/wiki/Philosophy")
+  File "/home/julian/Prog/github.com/wikiloop/WikipediaLinkFollower.py", line 25, in __init__
+    while self.has_next():
+  File "/home/julian/Prog/github.com/wikiloop/WikipediaLinkFollower.py", line 40, in has_next
+    next_url = self.get_first_valid_link(self.current_url, r.content)
+  File "/home/julian/Prog/github.com/wikiloop/WikipediaLinkFollower.py", line 89, in get_first_valid_link
+    for link in cls.find_non_italicized_parenthesized_links(paragraph):
+TypeError: 'NoneType' object is not iterable
+INFO:werkzeug:127.0.0.1 - - [17/Jul/2018 13:47:02] "GET / HTTP/1.1" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:root:Starting at https://en.wikipedia.org/wiki/Water
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Water HTTP/1.1" 200 96204
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Chemical_substance
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Chemical_substance HTTP/1.1" 200 26083
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Matter
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Matter HTTP/1.1" 200 66045
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Classical_physics
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Classical_physics HTTP/1.1" 200 20205
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Physics
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Physics HTTP/1.1" 200 82602
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Natural_science
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Natural_science HTTP/1.1" 200 47764
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Branches_of_science
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Branches_of_science HTTP/1.1" 200 30212
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Science
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Science HTTP/1.1" 200 103388
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Knowledge
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Knowledge HTTP/1.1" 200 44364
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Fact
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Fact HTTP/1.1" 200 26924
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Reality
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Reality HTTP/1.1" 200 53786
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Object_of_the_mind
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Object_of_the_mind HTTP/1.1" 200 14820
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Mathematical
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Mathematical HTTP/1.1" 200 63564
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Quantity
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Quantity HTTP/1.1" 200 18066
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Counting
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Counting HTTP/1.1" 200 16255
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Element_(mathematics)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Element_(mathematics) HTTP/1.1" 200 19225
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Mathematics
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): en.wikipedia.org:443
+DEBUG:urllib3.connectionpool:https://en.wikipedia.org:443 "GET /wiki/Mathematics HTTP/1.1" 200 63481
+INFO:root:STOP BY https://en.wikipedia.org/wiki/Quantity
+ERROR:flask.app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/julian/Prog/github.com/wikiloop/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/julian/Prog/github.com/wikiloop/api.py", line 12, in hello
+    l_follow = WikipediaLinkFollower("https://en.wikipedia.org/wiki/Water", "https://en.wikipedia.org/wiki/Philosophy")
+  File "/home/julian/Prog/github.com/wikiloop/WikipediaLinkFollower.py", line 25, in __init__
+    while self.has_next():
+  File "/home/julian/Prog/github.com/wikiloop/WikipediaLinkFollower.py", line 33, in has_next
+    raise LinkLoopError()
+WikipediaLinkFollower.LinkLoopError
+INFO:werkzeug:127.0.0.1 - - [17/Jul/2018 13:47:58] "GET / HTTP/1.1" 500 -
