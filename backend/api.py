@@ -26,7 +26,6 @@ def compute_wikiloop():
         return jsonify(exc.serialize())
     except Exception as exc:
         logging.error(exc)
-        logging.error("OUHOUH")
         return jsonify(error="Oups. There was an unexpected server error."), 500
 
 
