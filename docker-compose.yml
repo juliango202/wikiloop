@@ -1,0 +1,32 @@
+version: "3.5"
+
+services:
+  backend:
+    build: ./backend
+    expose:
+      - "5000"
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - "./frontend/:/usr/src/app"
+      - "/usr/src/app/node_modules"
+    expose:
+      - "3000"
+    environment:
+      - NODE_ENV=development
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:80
+    depends_on:
+      - frontend
+      - backend
+
