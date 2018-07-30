@@ -48,7 +48,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      startUrl: "https://en.wikipedia.org/wiki/Watermelon",
+      startUrl: "https://en.wikipedia.org/wiki/watermelon",
       startUrlError: "",
       stopUrl: "https://en.wikipedia.org/wiki/philosophy",
       stopUrlError: "",
